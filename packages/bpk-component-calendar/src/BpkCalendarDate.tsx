@@ -52,6 +52,7 @@ export type Props = DefaultProps & {
 
 type DefaultProps = {
   className?: string | null;
+  isoLabel?: string;
   isBlocked?: boolean;
   isFocused?: boolean;
   isKeyboardFocusable?: boolean;
@@ -185,13 +186,13 @@ class BpkCalendarDate extends PureComponent<Props> {
     }
 
     delete buttonProps.preventKeyboardFocus;
+    delete buttonProps.isoLabel;
 
     return (
       <button
         type="button"
         style={style}
         className={classNames.join(' ')}
-        aria-hidden={isBlocked}
         aria-label={`${date.getDate()}`}
         disabled={isBlocked}
         tabIndex={isKeyboardFocusable && isFocused ? 0 : -1}

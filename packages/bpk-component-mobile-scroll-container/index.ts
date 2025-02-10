@@ -16,8 +16,6 @@
  * limitations under the License.
  */
 
-import BpkPopover, { type Props } from './src/BpkPopover';
-import themeAttributes from './src/themeAttributes';
-export type BpkPopoverProps = Props;
-export { themeAttributes, };
-export default BpkPopover;
+import BpkMobileScrollContainer from './src/BpkMobileScrollContainer';
+
+export default BpkMobileScrollContainer;
